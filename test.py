@@ -16,11 +16,34 @@ def imageFov (im):
     cv2.putText(im, '0', (4030, 4000), cv2.FONT_HERSHEY_SIMPLEX,
                 5, (255, 0, 0), 5, cv2.LINE_AA)
 
+
+def iterasyon(iterable):
+    """This function provides access to objects in the previous
+        picture and objects in the next picture.
+        If you want to use this function, you can access the objects with this loop.
+        for item, next_item in iterasyon(PredBoxes.items()):
+        item[1]=([890,1774], [1930, 1347],[2532, 1478], [4508,1680], [4879,1936], [7067,1683])
+        next_item[1]=([739,1823], [1573, 1369],[2231, 1436], [4624,1608], [5577,1829], [7460,1781])
+
+
+"""
+    iterator = iter(iterable)
+    item = iterator.__next__()
+
+    for next_item in iterator:
+        yield item, next_item
+        item = next_item
+
+    yield item, None
+
+
+
 def calcDiff (data):
+    """function to calculate the angle change"""
     print(1)
 
 
-for img in PredBoxes:
+for img in PredBoxes: #or  use  for item, next_item in iterasyon(PredBoxes.items()):
     image_path = os.path.join("./imgs", img)
     im = cv2.imread(image_path)
     imageFov(im)
