@@ -1,0 +1,3 @@
+Bu kod parçası , her resim için imageFov() adlı bir fonksiyonu çağırarak resmin üzerine iki eksen çizgisi ve sıfır koordinatını gösteren bir metin çizmektedir. Bu kod parçası ayrıca tüm resimlerdeki objeleri teker teker dolaşıp her resimdeki objenin koordinatlarına bir çizgi çizer.
+
+Bu kod parçasındaki amaç 5'er metre aralıklarla çekilen görüntülerdeki objelerin bir önceki konumdaki objenin koordinatları ve bir sonraki konumdaki objenin koordinatlarını kullanarak açı değişimini hesaplayıp bir sonraki konumda objenin açı değişimine göre konumunu tahmin etmektir.
